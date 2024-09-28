@@ -51,3 +51,16 @@ if st.button("Listar Archivos"):
                 st.download_button("Descargar " + selected_file, f, file_name=selected_file)  
     else:  
         st.warning("No hay archivos en esta categoría.")
+        Para ejecutar tu código en el archivo README.py, sigue estos pasos:
+
+Asegúrate de tener Python instalado en tu sistema. Puedes descargarlo desde python.org.
+
+Instala streamlit si no lo tienes ya instalado. Puedes hacerlo ejecutando el siguiente comando en tu terminal:
+
+pip install streamlit
+Navega al directorio donde se encuentra tu archivo README.py utilizando la terminal.
+
+Ejecuta el siguiente comando para iniciar la aplicación con Streamlit:
+
+streamlit run README.py
+
