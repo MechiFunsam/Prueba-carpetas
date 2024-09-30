@@ -4,7 +4,7 @@ import os
 import shutil  
 
 # Definimos las carpetas de categorías  
-carpetas = ['Metodologías de la investigación', 'Metodologías cualitativas', 'TIC y humanidades']  
+carpetas = ['Metodologías de la investigación', 'Metodologías cualitativas', 'Estudios de recepción y audiencias']  
 base_dir = 'subidas'  
 
 # Creamos las carpetas si no existen  
@@ -32,7 +32,7 @@ st.title("Repositorio ComUnsam")
 # Subida de archivos  
 st.header("Agregá tus textos")  
 uploaded_file = st.file_uploader("Selecciona un texto", type=['txt', 'csv', 'jpg', 'png', 'pdf'])  
-selected_category = st.selectbox("Selecciona el material", carpetas)  
+selected_category = st.selectbox("Selecciona una materia", carpetas)  
 if st.button("Seleccionar archivo y subir"):
     upload_file(uploaded_file, selected_category)
 # Descarga de archivos  
