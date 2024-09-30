@@ -33,7 +33,8 @@ st.title("Repositorio ComUnsam")
 st.header("Suma tus textos")  
 uploaded_file = st.file_uploader("Selecciona un texto", type=['txt', 'csv', 'jpg', 'png', 'pdf'])  
 selected_category = st.selectbox("Selecciona el material", carpetas)  
-
+if st.button("Seleccionar archivo y subir"):
+    upload_file(uploaded_file, selected_category)
 # Descarga de archivos  
 st.header("Descargar archivo")  
 categoria_a_descargar = st.selectbox("Selecciona una materia para descargar", carpetas)  
