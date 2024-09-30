@@ -27,7 +27,7 @@ def list_files(selected_category):
     files = os.listdir(os.path.join(base_dir, selected_category))  
     return files  
 
-st.title("Repositorio común")  
+st.title("Repositorio ComUnsam")  
 
 # Subida de archivos  
 st.header("Suma tus textos")  
