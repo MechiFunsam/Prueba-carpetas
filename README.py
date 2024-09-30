@@ -4,7 +4,7 @@ import os
 import shutil
 
 # Definimos las carpetas de categorías
-folders = ['Categoría1', 'Categoría2', 'Categoría3', 'Categoría4']
+folders = ['Teorias y Perspectivas de la comunicación i', 'Teorias y perspectivas de la comunicación ii', 'Teoria y perspectivas de la comunicación iii']
 base_dir = 'uploads'
 
 # Creamos las carpetas si no existen
@@ -19,21 +19,21 @@ def upload_file(file, category):
         file_path = os.path.join(base_dir, category, file.name)
         with open(file_path, "wb") as f:
             f.write(file.getbuffer())
-        st.success("Archivo subido exitosamente!")
+        st.success("Tu archivo  ha sido subido exitosamente!")
 
 # Función para listar archivos y permitir la descarga
 def list_files(category):
     files = os.listdir(os.path.join(base_dir, category))
     return files
 
-st.title("Aplicación de Gestión de Archivos")
+st.title("Comunsam repositorio")
 
 # Subida de archivos
-st.header("Subir archivo")
+st.header("Sumá tus textos")
 uploaded_file = st.file_uploader("Selecciona un archivo", type=['txt', 'csv', 'jpg', 'png', 'pdf'])
-selected_category = st.selectbox("Selecciona la categoría", folders)
+selected_category = st.selectbox("Selecciona la materia", folders)
 
-if st.button("Subir Archivo"):
+if st.button("Subir mi archivo"):
     upload_file(uploaded_file, selected_category)
 
 # Descarga de archivos
