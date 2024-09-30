@@ -32,13 +32,9 @@ st.title("Comunsam repositorio")
 st.header("Sumá tus textos")
 uploaded_file = st.file_uploader("Selecciona un texto", type=['txt', 'csv', 'jpg', 'png', 'pdf'])
 selected_category = st.selectbox("Selecciona la materia", folders)
-
-if st.button("Selecioná la materia y subí tu texto"):  
-    upload_file(uploaded_file, selected_category)
-
 # Descarga de archivos
 st.header("Descargar archivo")
-category_to_download = st.selectbox("Selecciona la categoría para descargar", folders)
+category_to_download = st.selectbox("Selecciona una materia para descargar", folders)
 
 if st.button("Ver textos"):
     files = list_files(category_to_download)
