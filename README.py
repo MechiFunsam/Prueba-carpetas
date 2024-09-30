@@ -30,7 +30,7 @@ def list_files(selected_category):
 st.title("Repositorio ComUnsam")  
 
 # Subida de archivos  
-st.header("Suma tus textos")  
+st.header("Agregá tus textos")  
 uploaded_file = st.file_uploader("Selecciona un texto", type=['txt', 'csv', 'jpg', 'png', 'pdf'])  
 selected_category = st.selectbox("Selecciona el material", carpetas)  
 if st.button("Seleccionar archivo y subir"):
