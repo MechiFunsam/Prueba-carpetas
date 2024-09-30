@@ -33,7 +33,7 @@ st.header("Sumá tus textos")
 uploaded_file = st.file_uploader("Selecciona un texto", type=['txt', 'csv', 'jpg', 'png', 'pdf'])
 selected_category = st.selectbox("Selecciona la materia", folders)
 
-if st.button("Selecioná la materia y subí tu texto"):
+if st.button("Selecioná la materia y subí tu texto"):  
     upload_file(uploaded_file, selected_category)
 
 # Descarga de archivos
