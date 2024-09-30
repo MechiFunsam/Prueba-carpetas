@@ -4,7 +4,7 @@ import os
 import shutil
 
 # Definimos las carpetas de categorías
-folders = ['Teorias y Perspectivas de la comunicación i', 'Teorias y perspectivas de la comunicación ii', 'Teoria y perspectivas de la comunicación iii']
+folders = ['Metodologías de la investigación', 'Metodologias cualitativas', 'Tic y humanidades']
 base_dir = 'uploads'
 
 # Creamos las carpetas si no existen
