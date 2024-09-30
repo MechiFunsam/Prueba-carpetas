@@ -1,48 +1,48 @@
-# Prueba-carpetas
-import streamlit as st
-import os
-import shutil
+# Prueba-carpas
+importar streamlit como st
+importar sistema operativo
+Importar shutil
 
 # Definimos las carpetas de categorías
-folders = ['Metodologías de la investigación', 'Metodologias cualitativas', 'Tic y humanidades']
-base_dir = 'uploads'
+carpetas = ['Metodologías de la investigación', 'Metodologías cualitativas', 'Tic y humanidades']
+base_dir = 'subidas'
 
 # Creamos las carpetas si no existen
-os.makedirs(base_dir, exist_ok=True)
-for folder in folders:
-    os.makedirs(os.path.join(base_dir, folder), exist_ok=True)
+os.makedirs(directorio_base, exist_ok=Verdadero)
+Para carpeta en carpetas:
+    os.makedirs(os.path.join(directorio_base, carpeta), exist_ok=Verdadero)
 
 # Función para subir archivos
-def upload_file(file, category):
-    if file is not None:
+def upload_file(archivo, categoría):
+    Si el archivo no es Ninguno:
         # Ruta de destino donde se guardará el archivo
-        file_path = os.path.join(base_dir, category, file.name)
-        with open(file_path, "wb") as f:
-            f.write(file.getbuffer())
+        ruta_archivo = os.path.join(directorio_base, categoría, nombre_archivo)
+        con open(file_path, "wb") como f:
+            f.write(archivo.getbuffer())
         st.success("Tu archivo ha sido subido exitosamente!")
 
 # Función para listar archivos y permitir la descarga
-def list_files(category):
-    files = os.listdir(os.path.join(base_dir, category))
-    return files
+def list_files(categoría):
+    archivos = os.listdir(os.path.join(base_dir, categoría))
+    devolver archivos
 
-st.title("Comunsam repositorio")
+st.title("Repositorio común")
 
 # Subida de archivos
-st.header("Sumá tus textos")
+st.header("Suma tus textos")
 uploaded_file = st.file_uploader("Selecciona un texto", type=['txt', 'csv', 'jpg', 'png', 'pdf'])
-selected_category = st.selectbox("Selecciona la materia", folders)
+selected_category = st.selectbox("Selecciona el material", folders)
 # Descarga de archivos
 st.header("Descargar archivo")
-category_to_download = st.selectbox("Selecciona una materia para descargar", folders)
+categoria_to_download = st.selectbox("Selecciona una materia para descargar", carpetas)
 
-if st.button("Ver textos"):
-    files = list_files(category_to_download)
-    if files:
+si st.button("Ver textos"):
+    archivos = lista_archivos(categoría_a_descargar)
+    si archivos:
         selected_file = st.selectbox("Selecciona el archivo para descargar", files)
-        if st.button("Descargar"):
-            file_path = os.path.join(base_dir, category_to_download, selected_file)
-            with open(file_path, 'rb') as f:
-                st.download_button("Descargar " + selected_file, f, file_name=selected_file)
-    else:
+        si st.button("Descargar"):
+            ruta_archivo = os.path.join(directorio_base, categoría_a_descargar, archivo_seleccionado)
+            con open(file_path, 'rb') como f:
+                st.download_button("Descargar " + archivo_seleccionado, f, nombre_archivo=archivo_seleccionado)
+    demás:
         st.warning("No hay archivos en esta categoría.")
