@@ -40,7 +40,7 @@ if st.button("Ver textos subidos"):
 st.header("Descargar archivo")
 category_to_download = st.selectbox("Selecciona la categoría para descargar", folders)
 
-if st.button("Listar Archivos"):
+if st.button("Ver textos"):
     files = list_files(category_to_download)
     if files:
         selected_file = st.selectbox("Selecciona el archivo para descargar", files)
