@@ -56,6 +56,9 @@ if st.button("Listar Archivos"):
 File "/mount/src/prueba-carpetas/README.py", line 54
           Para ejecutar tu código en el archivo README.py, sigue estos pasos:
                ^
+SyntaxError: invalid syntax File "/mount/src/prueba-carpetas/README.py", line 54
+          Para ejecutar tu código en el archivo README.py, sigue estos pasos:
+               ^
 SyntaxError: invalid syntax
 
 Instala streamlit si no lo tienes ya instalado. Puedes hacerlo ejecutando el siguiente comando en tu terminal:
